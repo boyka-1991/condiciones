@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>verificador contraseña</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+    <div class="text">
+        Ingresa tu contraseña
+    </div>
+    <div>
+    <div class="porta">
+            <select class="selector" id="selector1">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+            </select>
+       
+            <select class="selector" id="selector2">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+            </select>
+
+            <select class="selector" id="selector3">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+            </select>
+
+    </div>
+        <div class="btnn">
+            <button id="#btnn" onclick="Ingresar()">Ingresar</button>
+        </div>
+        
+        <div class="resultado" id="resultado"></div>
+  
+    </div>
+    </div>
+
+    <script>
+        function Ingresar() {
+            selector1 = document.getElementById("selector1").value;
+            selector2 = document.getElementById("selector2").value;
+            selector3 = document.getElementById("selector3").value;
+
+            password = selector1 + selector2 + selector3;
+
+            resultado = document.getElementById("resultado");
+
+            if (password == "911") {
+                resultado.textContent = "password 1 correcto";
+            } else if (password == "714") {
+                resultado.textContent = "password 2 correcto";
+            } else {
+                resultado.textContent = "password incorrecto";
+            }
+        }
+    </script>
+</body>
+</html>

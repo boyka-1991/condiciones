@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stickers</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body class="ajam">
+    <div class="text">
+        Puedes llevar hasta 10 stickers en total
+    </div>
+    <div>
+    <div class="stickers">
+        <section class="nakamas">
+             <img src="./assets/img/luffy.jpg" alt="">
+             <input type="text" class="input1">
+        </section>
+        <section class="nakamas">
+             <img src="./assets/img/zoro.png" alt="">
+             <input type="text" class="input2">
+        </section>
+        <section class="nakamas">
+             <img src="./assets/img/shank.png" alt="">
+             <input type="text" class="input3">
+        </section>
+        
+    </div>
+        <div class="total"></div>  
+        <div class="btn"><button id="btn">Verificar</button></div>
+    </div>
+        <script>
+            function suma (){
+                let valor1=document.querySelector('.input1').value
+                let valor2=document.querySelector('.input2').value
+                let valor3=document.querySelector('.input3').value
+                let total=document.querySelector('.total') 
+
+                valor=Number(valor1)+Number(valor2)+Number(valor3)
+
+            if (valor <=0) { 
+                total.innerText= 'No llevas stickers' 
+            } 
+            if (valor >=1&&valor<=10) {
+                total.innerText= 'Llevas ' + valor + ' stickers'
+            } 
+            if (valor >=11){ 
+                total.innerText= 'Llevas muchos stickers'
+            } 
+            }
+            document.getElementById("btn").addEventListener("click",suma)
+    </script>
+</body>
+</html>
